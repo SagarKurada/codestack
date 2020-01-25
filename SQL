@@ -82,4 +82,5 @@ from Delivery d
       group by 
       country_name
       ;
-9. 
+9. From, Where, Group by
+10. 
