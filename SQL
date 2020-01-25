@@ -83,4 +83,19 @@ from Delivery d
       country_name
       ;
 9. From, Where, Group by
-10. 
+10. Inner Join:
+    SELECT StudentCourse.COURSE_ID, Student.NAME, Student.AGE FROM Student
+   INNER JOIN StudentCourse
+   ON Student.ROLL_NO = StudentCourse.ROLL_NO;
+
+   Left Join:
+     SELECT table1.column1,table1.column2,table2.column1,....
+   FROM table1 
+   LEFT JOIN table2
+   ON table1.matching_column = table2.matching_column;
+
+Right Join:
+   SELECT table1.column1,table1.column2,table2.column1,....
+   FROM table1 
+   RIGHT JOIN table2
+   ON table1.matching_column = table2.matching_column;
