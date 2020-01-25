@@ -28,5 +28,30 @@ from Department
 group by id
 order by id
 
-3. 
+3. Having: we use having for group by  to keep a condition after group by 
+  select email from person group by email having count(email)>1
+
+4. Partition
+
  
+5. Creating a new colum 
+   select 
+ROUND(AVG(
+    case 
+    when d.order_date = d.customer_pref_delivery_date then 1 else 0 
+    end) 
+      * 100,2) immediate_percentage
+from Delivery d
+
+
+6. count(*)>=3
+7. Filtering group-by function:
+         SELECT seller_id
+      from sales
+      group by seller_id 
+      having SUM(price) = 
+      (select MAX(total_price)  from (select SUM(price)  total_price 
+           from sales
+           group by seller_id)tab)
+           
+8. 
