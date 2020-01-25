@@ -66,4 +66,20 @@ from Delivery d
       (select count(customer_number) from orders group by customer_number)
       ;
        
-8. 
+8. 3 conditions: when-then, if-else
+         select  country_name,
+      (case 
+          when avg(weather_state) >=25 then 'Hot' 
+          when avg(weather_state)<=15 then "Cold"
+          else "Warm"
+          end) weather_type
+
+      from 
+      countries a, weather b
+      where
+      a.country_id=b.country_id and
+      day between '2019-11-01' and '2019-11-31'
+      group by 
+      country_name
+      ;
+9. 
