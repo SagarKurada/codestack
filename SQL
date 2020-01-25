@@ -99,3 +99,11 @@ Right Join:
    FROM table1 
    RIGHT JOIN table2
    ON table1.matching_column = table2.matching_column;
+11. Lead/Lag - subsequent, previous row data along with row data
+   Lead(Column Name, offset - number of rows, default value- last) over(order by ...)
+12. EXISTS - makes query faster,clearee
+  Execute outer query only if we have inner query 
+13. Select top 1 salary from ...;
+14. CTE Function:
+   https://www.sqlservertutorial.net/sql-server-basics/sql-server-cte/
+15. 
