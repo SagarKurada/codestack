@@ -46,12 +46,24 @@ from Delivery d
 
 6. count(*)>=3
 7. Filtering group-by function:
-         SELECT seller_id
+   a) SELECT seller_id
       from sales
       group by seller_id 
       having SUM(price) = 
       (select MAX(total_price)  from (select SUM(price)  total_price 
            from sales
-           group by seller_id)tab)
-           
+           group by seller_id)tab); 
+   b) SELECT
+          customer_number
+      FROM
+          orders
+      GROUP BY customer_number
+      ORDER BY COUNT(*) DESC
+      LIMIT 1
+   c) select customer_number from orders 
+      group by customer_number
+      having count(customer_number) >= all 
+      (select count(customer_number) from orders group by customer_number)
+      ;
+       
 8. 
