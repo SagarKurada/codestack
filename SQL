@@ -106,4 +106,15 @@ Right Join:
 13. Select top 1 salary from ...;
 14. CTE Function:
    https://www.sqlservertutorial.net/sql-server-basics/sql-server-cte/
-15. 
+15. Running Total
+ 
+ select gender, day, 
+sum(score_points) over (partition by gender order by day) as total
+from scores; 
+16. Find the Start and End Number of Continuous Ranges
+
+select min(log_id) START_ID, max(log_id)END_ID from 
+(SELECT log_id, ROW_NUMBER() OVER(ORDER BY log_id) as num
+FROM Logs) a
+group by log_id-num; 
+17. 
