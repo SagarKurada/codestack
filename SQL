@@ -9,6 +9,11 @@
   b)update salary 
     set sex = 
     IF (sex = "m", "f", "m");
+  c) ifnull(case
+    when state='aprroved' then 1
+    when state='declined' then 0
+    end),0)aprroved_count
+    
     
 2. Reformat Department Table : Rows to Columns : Pivot 
   select id,
@@ -117,4 +122,19 @@ select min(log_id) START_ID, max(log_id)END_ID from
 (SELECT log_id, ROW_NUMBER() OVER(ORDER BY log_id) as num
 FROM Logs) a
 group by log_id-num; 
-17. 
+17. date_format(trans_date,'%Y-%m') as month
+18. Using group-by in having condition:
+      select customer_id from customer
+   group by customer_id
+   having count(distinct  product_key) = (select count(*) from product); 
+
+19. Minus:
+    select distinct(page_id)recommended_page from likes
+where user_id in 
+(select user2_id from friendship where user1_id =1
+union
+select user1_id from friendship where user2_id=1)
+and 
+page_id NOT IN (SELECT page_id FROM Likes WHERE user_id=1);
+
+20. 
