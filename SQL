@@ -163,4 +163,15 @@ rank() over (order by visited_on) as rk
     where rk >= 7
 ;
 
-21. 
+21. Editing the columns
+    Select
+(case
+when id%2=0 then id-1
+when id%2=1 and id<(select max(id) from seat) then id+1
+else id
+end )as id
+, student
+from seat
+order by id asc ;
+
+22. 
