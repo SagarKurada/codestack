@@ -174,4 +174,7 @@ end )as id
 from seat
 order by id asc ;
 
-22. 
+22. Time period range:
+    min_date between dateadd(day, -90, '2019-06-30') and '2019-06-30'
+
+23. 
