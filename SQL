@@ -177,4 +177,11 @@ order by id asc ;
 22. Time period range:
     min_date between dateadd(day, -90, '2019-06-30') and '2019-06-30'
 
-23. 
+23. For Loop
+   SELECT 0 as transactions_count, max(transactions_count) as temp
+    FROM c
+	UNION ALL
+    SELECT transactions_count + 1 , temp 
+	FROM d
+    where transactions_count < temp
+ 
