@@ -184,4 +184,9 @@ order by id asc ;
     SELECT transactions_count + 1 , temp 
 	FROM d
     where transactions_count < temp
- 
+ 24.  dense_rank() OVER (ORDER BY SCORE DESC) AS Rank
+      rank() OVER (ORDER BY SCORE DESC) AS Rank
+      Use dense_rank() instead of rank() because using rank() does not account for ties.
+
+
+      
