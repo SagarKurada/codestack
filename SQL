@@ -187,6 +187,14 @@ order by id asc ;
  24.  dense_rank() OVER (ORDER BY SCORE DESC) AS Rank
       rank() OVER (ORDER BY SCORE DESC) AS Rank
       Use dense_rank() instead of rank() because using rank() does not account for ties.
+25. Lag and lEAD
+     select distinct num from 
+(
+    select Num, LEAD(Num, 1) over(order by Id) as next_num, LEAD(Num, 2) over(order by Id) as next_num_2
+from Logs) p
+where num=next_num and num=next_num_2; 
+
+26. 
 
 
       
