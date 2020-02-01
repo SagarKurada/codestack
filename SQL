@@ -194,7 +194,13 @@ order by id asc ;
 from Logs) p
 where num=next_num and num=next_num_2; 
 
-26. 
+Instead of using lead and lag, using id's
 
+ SELECT DISTINCT l1.num AS ConsecutiveNums
+FROM logs l1, logs l2, logs l3
+WHERE l3.id = l2.id +1 AND l3.id = l1.id +2
+AND l1.num = l2.num and l2.num = l3.num
+
+26. 
 
       
