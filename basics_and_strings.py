@@ -297,7 +297,8 @@
     i[::]=i[::-1]
 45. Filter: l = list(filter(lambda x: x > 10 and x < 80, l))
 46. Reminder : y%x
-
+47. Replace :
+    return address.replace('.', '[.]')
   
   
  Data Frames:
