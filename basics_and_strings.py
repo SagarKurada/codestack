@@ -296,8 +296,11 @@
 44. Palindrome/Reverse 
     i[::]=i[::-1]
 45. Filter: l = list(filter(lambda x: x > 10 and x < 80, l))
+46. Reminder : y%x
+
   
-46. Data Frames:
+  
+ Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
     3. creating YearMonth field for the ease of reporting and visualization:
