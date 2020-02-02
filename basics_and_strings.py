@@ -299,6 +299,8 @@
 46. Reminder : y%x
 47. Replace :
     return address.replace('.', '[.]')
+48. Create list of single item repeated N times
+     [5]*n
   
   
  Data Frames:
