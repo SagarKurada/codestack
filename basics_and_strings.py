@@ -10,6 +10,7 @@
   word = 'geeks, for, geeks'
   print(word.split(', '))# splits on commas
   ['geeks', 'for', 'geeks']
+  
 
 3.Map Function:
   Returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.)
