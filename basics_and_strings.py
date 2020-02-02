@@ -11,6 +11,7 @@
   print(word.split(', '))# splits on commas
   ['geeks', 'for', 'geeks']
   
+   y,m,d=map(int,date.split('-'))
 
 3.Map Function:
   Returns a list of the results after applying the given function to each item of a given iterable (list, tuple etc.)
