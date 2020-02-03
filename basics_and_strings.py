@@ -69,6 +69,7 @@
       count = [i for i in range(len(string)) if string.startswith(sub_string, i)]
       return len(count) # for number of occurences
       return count # for list containiing index numbers of occurences
+    Count=keyboard.index(j)
  
 15. String validators: syntax - string.func()
     isdigit()
