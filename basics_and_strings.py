@@ -309,6 +309,7 @@
 46. Reminder : y%x
 47. Replace :
     return address.replace('.', '[.]')
+    return address.replace('.', '[.]',n) : 'n' replacememts
 48. Create list of single item repeated N times
      [5]*n
 49. Comparing the lists and checking the count
