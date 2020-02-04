@@ -302,8 +302,10 @@
     return address.replace('.', '[.]')
 48. Create list of single item repeated N times
      [5]*n
- 49. Comparing the lists and checking the count
+49. Comparing the lists and checking the count
        sum(map(S.count, J)) 
+50. If else:
+      count += 1 if ch == "L" else -1
   
  Data Frames:
     1. columns data type: data.dtypes
