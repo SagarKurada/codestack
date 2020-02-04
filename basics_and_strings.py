@@ -306,6 +306,10 @@
        sum(map(S.count, J)) 
 50. If else:
       count += 1 if ch == "L" else -1
+51. Enumerate:
+    for count,ele in enumerate(l1,100): 
+    print count,ele 
+    
   
  Data Frames:
     1. columns data type: data.dtypes
