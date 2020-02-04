@@ -104,6 +104,10 @@
     from collections import Counter
     print(Counter(myList).items()) : returns the dictionary ( Also can use .keys, .values)
       
+21.1 List index to dictionary values:
+      d = {b:i for i,b in enumerate(B)}
+        return [d[a] for a in A]
+      
  
 22. Hashable objects: which has fixed function and unchangeable. Ex: tuple, int, string
 
