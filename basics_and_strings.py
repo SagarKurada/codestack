@@ -319,6 +319,13 @@
     for count,ele in enumerate(l1,100): 
     print count,ele 
     
+52. Linked List: 
+     answer = 0
+        while head: 
+            answer = 2*answer + head.val 
+            head = head.next 
+        return answer 
+    
   
  Data Frames:
     1. columns data type: data.dtypes
