@@ -119,6 +119,9 @@
      for k,v in ll:
       lll[k].append(v)
       
+21.3 The defaultdict tool is a container in the collections class of Python. 
+    It's similar to the usual dictionary (dict) container, but the only difference is that a defaultdict will
+    have a default value if that key has not been set yet.
  
 22. Hashable objects: which has fixed function and unchangeable. Ex: tuple, int, string
 
