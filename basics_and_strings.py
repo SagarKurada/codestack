@@ -5,11 +5,13 @@
   p= [ ([ i, j,k])for i in range( x + 1) for j in range( y + 1) for k in range(z+1) if ( ( i + j+ k ) != n )]
     print(p)
 
-2.Split Function:
+2.1Split Function:
   returns a list of strings after breaking the given string by the specified separator
   word = 'geeks, for, geeks'
   print(word.split(', '))# splits on commas
   ['geeks', 'for', 'geeks']
+  
+ 2.2 word.partition('#) :acts like a delimiter
   
    y,m,d=map(int,date.split('-'))
 
