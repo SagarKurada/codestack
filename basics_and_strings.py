@@ -335,7 +335,7 @@
             answer = 2*answer + head.val 
             head = head.next 
         return answer 
-    
+53. //: divide with integral result (discard remainder)
   
  Data Frames:
     1. columns data type: data.dtypes
