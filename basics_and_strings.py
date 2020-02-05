@@ -66,12 +66,16 @@
     list.reverse()
     print(list)
     
-14. Finding number of occurences/index numbers of a substring in a string
+14.1  Finding number of occurences/index numbers of a substring in a string
     def count_substring(string, sub_string):
       count = [i for i in range(len(string)) if string.startswith(sub_string, i)]
       return len(count) # for number of occurences
       return count # for list containiing index numbers of occurences
     Count=keyboard.index(j)
+            
+14.2 To find whether an element is there in a list or not
+        m=[x for x in l if x in arr3]
+                   
  
 15. String validators: syntax - string.func()
     isdigit()
