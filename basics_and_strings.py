@@ -177,6 +177,7 @@
     deq = deque(list)
     d.rotate(3)
     d.popleft() : gives the the left most object
+    https://www.geeksforgeeks.org/deque-in-python/
     
 29. Itertools:
     product(A, B) returns the same as ((x,y) for x in A for y in B).
