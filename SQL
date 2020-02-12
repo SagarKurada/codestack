@@ -201,6 +201,8 @@ FROM logs l1, logs l2, logs l3
 WHERE l3.id = l2.id +1 AND l3.id = l1.id +2
 AND l1.num = l2.num and l2.num = l3.num
 
-26. 
+26. Common Table Expression :
+ WITH CTE AS (
+select delivery.*, row_number()over(partition by customer_id order by order_date asc) as order_time from Delivery)
 
       
