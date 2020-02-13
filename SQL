@@ -205,4 +205,18 @@ AND l1.num = l2.num and l2.num = l3.num
  WITH CTE AS (
 select delivery.*, row_number()over(partition by customer_id order by order_date asc) as order_time from Delivery)
 
+27. Median
+  with cte_1 as
+(
+    select id, company , 
+salary,
+row_number()over(partition by company order by salary asc) as row,
+count(Id) over(partition by Company) count
+from employee)
+
+select id, company, salary from cte_1
+where row between
+count/2.0 and count/2.0 +1;
+
+28. Left Join and Right Join cannot be done in CTE
       
