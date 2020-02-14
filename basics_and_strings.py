@@ -65,6 +65,7 @@
 13. Reverse a list
     list.reverse()
     print(list)
+    list[::-1]
     
 14.1  Finding number of occurences/index numbers of a substring in a string
     def count_substring(string, sub_string):
