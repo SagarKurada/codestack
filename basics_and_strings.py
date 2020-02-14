@@ -341,6 +341,9 @@
 54. Ord function:
     Given a string of length one, return an integer representing the Unicode code point of the character when the argument is a unicode object, 
     or the value of the byte when the argument is an 8-bit string.
+55. Get Function :
+     The get() method is used to avoid such situations. This method returns the value for the given key, if present in the dictionary. 
+      If not, then it will return None (if get() is used with only one argument).
   
  Data Frames:
     1. columns data type: data.dtypes
