@@ -219,4 +219,6 @@ where row between
 count/2.0 and count/2.0 +1;
 
 28. Left Join and Right Join cannot be done in CTE
+29. Dated Diff : 
+     where datediff('2019-06-23',b.available_from)>30
       
