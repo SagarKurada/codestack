@@ -345,6 +345,16 @@
      The get() method is used to avoid such situations. This method returns the value for the given key, if present in the dictionary. 
       If not, then it will return None (if get() is used with only one argument).
   
+56. List to dictionaries:
+     d={}
+        for i in A:
+            d[i]=d.get(i,0)+1
+        print(d)
+        a=max(d.values())
+        for k,v in d.items():
+            if v== a:
+                return k
+57. 
  Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
