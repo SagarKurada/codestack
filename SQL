@@ -228,3 +228,5 @@ count/2.0 and count/2.0 +1;
       
 31. Cast: Csting the fucntion into integer, float
    CAST(SUM(A.units*B.price) AS FLOAT
+32. Getting unique rows.
+   distinct(row1)
