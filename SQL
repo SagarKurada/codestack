@@ -226,3 +226,5 @@ count/2.0 and count/2.0 +1;
     select id, name from Students
    where department_id not in (select distinct id from Departments)
       
+31. Cast: Csting the fucntion into integer, float
+   CAST(SUM(A.units*B.price) AS FLOAT
