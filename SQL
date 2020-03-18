@@ -253,3 +253,5 @@ count/2.0 and count/2.0 +1;
 	from project
 	group by project_id
 	order by c desc); 
+36. DateDiff:
+    datediff(day,last_date,recorddate) =1
