@@ -239,4 +239,8 @@ count/2.0 and count/2.0 +1;
 	GROUP BY question_id
 	)
 	SELECT TOP 1 question_id as survey_log FROM cte_tab ORDER BY answer_rate desc;
-34. 
+34. Deleting duplicate rows:
+    	DELETE p1
+	FROM Person p1, Person p2
+	WHERE p1.Email = p2.Email AND
+	p1.Id > p2.Id;
