@@ -244,3 +244,12 @@ count/2.0 and count/2.0 +1;
 	FROM Person p1, Person p2
 	WHERE p1.Email = p2.Email AND
 	p1.Id > p2.Id;
+35. Having Group by and selecting the top 1 maximum function
+  	select project_id from project
+	group by project_id
+	having count(employee_id) =
+
+	(select top 1  count(employee_id) c
+	from project
+	group by project_id
+	order by c desc); 
