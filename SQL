@@ -230,3 +230,13 @@ count/2.0 and count/2.0 +1;
    CAST(SUM(A.units*B.price) AS FLOAT
 32. Getting unique rows.
    distinct(row1)
+33. Creating a new column based on grouping 
+	    WITH cte_tab as(
+	SELECT question_id, 
+	(SUM(case when answer_id is not null then 1 else 0 end)*100)/count(*) as answer_rate
+	FROM 
+	survey_log
+	GROUP BY question_id
+	)
+	SELECT TOP 1 question_id as survey_log FROM cte_tab ORDER BY answer_rate desc;
+34. 
