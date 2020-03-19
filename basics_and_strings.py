@@ -122,6 +122,13 @@
      for k,v in ll:
       lll[k].append(v)
       
+      using setdefault
+      indices = {}
+        for idx, num in enumerate(sorted(nums)):
+            indices.setdefault(num, idx)
+        return [indices[num] for num in nums]
+      Set default takes the alreading existing value to the key if it exists. otherwise it takes idx value
+      
 21.3 The defaultdict tool is a container in the collections class of Python. 
     It's similar to the usual dictionary (dict) container, but the only difference is that a defaultdict will
     have a default value if that key has not been set yet.
