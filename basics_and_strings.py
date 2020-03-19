@@ -113,6 +113,8 @@
       
 21.1 List index to dictionary values - Key will take only one value
       d = {b:i for i,b in enumerate(B)} 
+      
+     
     
 21.2 List index to dictionary values - Key taking multiple values
      ll=[[b,i] for i,b in enumerate(B)]
