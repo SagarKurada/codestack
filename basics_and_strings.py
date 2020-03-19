@@ -117,7 +117,10 @@
      
     
 21.2 List index to dictionary values - Key taking multiple values
+
      ll=[[b,i] for i,b in enumerate(B)]
+     import collections
+     d = collections.defaultdict(list)
      lll=defaultdict(list)
      for k,v in ll:
       lll[k].append(v)
