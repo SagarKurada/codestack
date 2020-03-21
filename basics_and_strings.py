@@ -1,3 +1,10 @@
+List:
+i) Removing duplicates:
+    mylist = list(dict.fromkeys(mylist))
+ii) 
+
+
+
 
 # test python file
 #sagar-updated
