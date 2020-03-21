@@ -387,6 +387,8 @@ ii)
             x=x//10
         return 0 if result > pow(2, 31) else result*s
         
+ 58. Printing the alphabets:
+    capitals = [chr(x) for x in range(ord('A'), ord('Z')+1)]
  Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
