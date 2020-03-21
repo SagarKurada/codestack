@@ -366,7 +366,20 @@
         for k,v in d.items():
             if v== a:
                 return k
-57. 
+              
+ 57. Reversing an integer:
+    def reverse(self, x: int) -> int:
+        if x>0:
+            s=1
+        else:
+            s=-1
+            x=-x
+        result =0
+        while(x>0):
+            result=(10*result)+(x%10)
+            x=x//10
+        return 0 if result > pow(2, 31) else result*s
+        
  Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
