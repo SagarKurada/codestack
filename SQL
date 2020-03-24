@@ -187,6 +187,8 @@ order by id asc ;
  24.  RANK() OVER(PARTITION BY DepartmentId ORDER BY Salary DESC) AS rank
       DENSE_RANK() OVER(PARTITION BY DepartmentId ORDER BY Salary DESC) AS rank
       Use dense_rank() instead of rank() because using rank() does not account for ties.
+      rank -(1,2,2,4)
+      dense_rank -(1,2,2,3)
 25. Lag and lEAD
      select distinct num from 
 (
