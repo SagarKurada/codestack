@@ -184,6 +184,11 @@ order by id asc ;
     SELECT transactions_count + 1 , temp 
 	FROM d
     where transactions_count < temp
+    
+    The difference between Union and Union all is that Union all will not eliminate duplicate rows, 
+    instead it just pulls all the rows from all the tables fitting your query specifics and combines them into a table.
+    A UNION statement effectively does a SELECT DISTINCT on the results set.
+    
  24.  RANK() OVER(PARTITION BY DepartmentId ORDER BY Salary DESC) AS rank
       DENSE_RANK() OVER(PARTITION BY DepartmentId ORDER BY Salary DESC) AS rank
       Use dense_rank() instead of rank() because using rank() does not account for ties.
