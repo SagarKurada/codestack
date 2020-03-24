@@ -404,8 +404,9 @@ ii)
             timer += 1
         return timer
     
-    
-    
+  60. Sorting of group of sentences
+      letters.sort(key = lambda x: x.split()[1]) # based on first word of every sentence
+      letters.sort(key = lambda x: x.split()[1:]) #based on all sentences from first word
     
  Data Frames:
     1. columns data type: data.dtypes
