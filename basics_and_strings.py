@@ -408,6 +408,10 @@ ii)
       letters.sort(key = lambda x: x.split()[1]) # based on first word of every sentence
       letters.sort(key = lambda x: x.split()[1:]) #based on all sentences from first word
     
+  61. Palindrome-Alphanumeric:
+      s = [c.lower() for c in s if c.isalnum()]
+       return s == s[::-1]
+
  Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
