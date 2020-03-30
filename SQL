@@ -280,7 +280,7 @@ count/2.0 and count/2.0 +1;
 39. Selecting top 1:
     My SQL Server:
     select top 1 person_name from total desc
-    SQL Server:
+    My SQL :
     select temp.person_name temp limit 1;
     
 40.  a) Creating new columns from same column : 
