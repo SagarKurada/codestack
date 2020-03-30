@@ -283,7 +283,7 @@ count/2.0 and count/2.0 +1;
     SQL Server:
     select temp.person_name temp limit 1;
     
-40.  Creating new columns from same column : 
+40.  a) Creating new columns from same column : 
 	select max(America) America, max(Asia)Asia, max(Europe)Europe
 	 from
 	(select  
@@ -293,3 +293,4 @@ count/2.0 and count/2.0 +1;
 	row_number() over(partition by continent order by name) As rn
 	from student)p
 	group by rn; 
+    b) Using Left Joins
