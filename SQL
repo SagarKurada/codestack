@@ -111,7 +111,7 @@ Right Join:
 13. Select top 1 salary from ...;
 14. CTE Function:
    https://www.sqlservertutorial.net/sql-server-basics/sql-server-cte/
-15. Running Total
+15. Running Total, Cumulative total
  
  select gender, day, 
 sum(score_points) over (partition by gender order by day) as total
