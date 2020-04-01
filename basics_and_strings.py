@@ -434,6 +434,12 @@ ii)
    64. Creating a list = [0]*n
        Creating a matrix = rows=[0]*n ; cols =[0]*n
     
+   65. XOR function:
+       0^0 - 0
+       1^0 - 1
+       1^1 - 0
+       0^1 - 1
+    
     Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
