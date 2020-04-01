@@ -427,6 +427,10 @@ ii)
         for c,r in [i-1,j],[i+1,j],[i,j-1],[i,j+1]:
             if 0 <= c < len(grid) and 0 <= r < len(grid[0]) and grid[c][r] == '1':
                 self.dfs(grid,c,r)
+                
+   63. Insert :
+       for i, v in zip(index, nums):
+            res.insert(i, v)
  Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
