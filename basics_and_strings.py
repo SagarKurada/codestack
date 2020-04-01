@@ -431,7 +431,10 @@ ii)
    63. Insert :
        for i, v in zip(index, nums):
             res.insert(i, v)
- Data Frames:
+   64. Creating a list = [0]*n
+       Creating a matrix = rows=[0]*n ; cols =[0]*n
+    
+    Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
     3. creating YearMonth field for the ease of reporting and visualization:
