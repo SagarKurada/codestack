@@ -411,7 +411,22 @@ ii)
   61. Palindrome-Alphanumeric:
       s = [c.lower() for c in s if c.isalnum()]
        return s == s[::-1]
-
+  62. DFS
+    def numIslands(self, grid: List[List[str]]) -> int:
+        count = 0
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] == '1':
+                    self.dfs(grid,i,j)
+                    count  += 1
+        print(grid)
+        return count
+    # use a helper function to flip connected '1's to 0
+    def dfs(self,grid,i,j):
+        grid[i][j] = '0'
+        for c,r in [i-1,j],[i+1,j],[i,j-1],[i,j+1]:
+            if 0 <= c < len(grid) and 0 <= r < len(grid[0]) and grid[c][r] == '1':
+                self.dfs(grid,c,r)
  Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
