@@ -261,7 +261,7 @@ count/2.0 and count/2.0 +1;
 	group by project_id
 	order by c desc); 
 36. DateDiff:
-    datediff(day,last_date,recorddate) =1
+    datediff(day,initial_date,final_date) =1
 37. Using case to keep two filters for a same column:
     	select distinct buyer_id
 	from sales s
