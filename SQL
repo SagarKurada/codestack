@@ -226,18 +226,16 @@ where row between
 count/2.0 and count/2.0 +1;
 
 28. Left Join and Right Join cannot be done in CTE
-29. Dated Diff : 
-     where datediff('2019-06-23',b.available_from)>30
-     
-30. Not in Function:
+
+29. Not in Function:
     select id, name from Students
    where department_id not in (select distinct id from Departments)
       
-31. Cast: Csting the fucntion into integer, float
+30. Cast: Csting the fucntion into integer, float
    CAST(SUM(A.units*B.price) AS FLOAT
-32. Getting unique rows.
+31. Getting unique rows.
    distinct(row1)
-33. Creating a new column based on grouping 
+32. Creating a new column based on grouping 
 	    WITH cte_tab as(
 	SELECT question_id, 
 	(SUM(case when answer_id is not null then 1 else 0 end)*100)/count(*) as answer_rate
@@ -246,12 +244,12 @@ count/2.0 and count/2.0 +1;
 	GROUP BY question_id
 	)
 	SELECT TOP 1 question_id as survey_log FROM cte_tab ORDER BY answer_rate desc;
-34. Deleting duplicate rows:
+33. Deleting duplicate rows:
     	DELETE p1
 	FROM Person p1, Person p2
 	WHERE p1.Email = p2.Email AND
 	p1.Id > p2.Id;
-35. Having Group by and selecting the top 1 maximum function
+34. Having Group by and selecting the top 1 maximum function
   	select project_id from project
 	group by project_id
 	having count(employee_id) =
@@ -260,9 +258,9 @@ count/2.0 and count/2.0 +1;
 	from project
 	group by project_id
 	order by c desc); 
-36. DateDiff:
+35. DateDiff:
     datediff(day,initial_date,final_date) =1
-37. Using case to keep two filters for a same column:
+36. Using case to keep two filters for a same column:
     	select distinct buyer_id
 	from sales s
 	join product p
@@ -270,20 +268,20 @@ count/2.0 and count/2.0 +1;
 	group by buyer_id
 	having sum(case when p.product_name = 'S8' then 1 else 0 end) >= 1 and
 		   sum(case when p.product_name = 'iPhone' then 1 else 0 end) = 0;
-38. Creating a new column:
+37. Creating a new column:
 
     select fail_date,  
        'failed' as period
         from failed; 
 	
 	
-39. Selecting top 1:
+38. Selecting top 1:
     My SQL Server:
     select top 1 person_name from total desc
     My SQL :
     select temp.person_name temp limit 1;
     
-40.  a) Creating new columns from same column : 
+39.  a) Creating new columns from same column : 
 	select max(America) America, max(Asia)Asia, max(Europe)Europe
 	 from
 	(select  
