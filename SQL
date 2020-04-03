@@ -194,6 +194,7 @@ order by id asc ;
       Use dense_rank() instead of rank() because using rank() does not account for ties.
       rank -(1,2,2,4)
       dense_rank -(1,2,2,3)
+      row -(1,2,3,4)
       Windows function will not work in My SQL
 25. Lag and lEAD
      select distinct num from 
