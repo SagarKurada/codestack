@@ -199,6 +199,7 @@ ii)
     deq = deque(list)
     d.rotate(3)
     d.popleft() : gives the the left most object
+    d.pop(index number)
     https://www.geeksforgeeks.org/deque-in-python/
     
 29. Itertools:
