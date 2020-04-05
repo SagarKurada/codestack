@@ -116,6 +116,17 @@ Right Join:
  select gender, day, 
 sum(score_points) over (partition by gender order by day) as total
 from scores; 
+   Without Window Function:
+   select player_id, event_date, sum(games_played) games_played_so_far
+from
+(select a.player_id, a.event_date, b.games_played
+from activity a
+join 
+activity b
+where a. event_date>=b.event_date and a.player_id=b.player_id)p
+group by 
+player_id, event_date
+; 
 16. Find the Start and End Number of Continuous Ranges
 
 select min(log_id) START_ID, max(log_id)END_ID from 
