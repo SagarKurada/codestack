@@ -441,6 +441,24 @@ ii)
        1^1 - 0
        0^1 - 1
     
+   66. Prime - Time Complexity:
+        def countPrimes(self, n: int) -> int:
+        l=[]
+        if n<3:
+            return 0
+        l=[1]*n
+        #print(l)
+        l[0]=0
+        #print(l)
+        l[1]=0
+        #print(l)
+        m=2
+        while m*m<n:
+            if l[m]==1:
+                l[m*m:n:m]=[0]*(1+(n - m * m - 1) // m)
+            m+=1 if m==2 else 2
+        return sum(l)
+   
     Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
