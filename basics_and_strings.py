@@ -458,7 +458,20 @@ ii)
                 l[m*m:n:m]=[0]*(1+(n - m * m - 1) // m)
             m+=1 if m==2 else 2
         return sum(l)
-   
+    67. def find_sub_sets(nums):
+            z_list = []
+            sub_sets = []
+            for i in range(len(nums)):
+                if nums[i] == 0:
+                    z_list.append(i)
+            i = 0
+            j = 0
+            while j < len(nums):
+                if j in z_list:
+                    sub_sets.append(nums[i:j])
+                    i = j + 1
+                j+=1
+            return sub_sets
     Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
