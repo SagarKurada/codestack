@@ -475,6 +475,19 @@ ii)
                     sub_sets.append(nums[i:])     
 
             return sub_sets
+     68. Sorted Converging solutions:
+             def sa(s,net):
+                i=0
+                j=len(s)-1
+                while(i<j):
+                    if s[i]+s[j] == net:
+                        return [i,j]
+                    elif s[i]+s[j] >= net:
+                        j=j-1
+                    else:
+                        i=i+1
+
+            
     Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
