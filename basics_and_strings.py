@@ -464,13 +464,16 @@ ii)
             for i in range(len(nums)):
                 if nums[i] == 0:
                     z_list.append(i)
+            #print(z_list)
             i = 0
-            j = 0
-            while j < len(nums):
-                if j in z_list:
-                    sub_sets.append(nums[i:j])
-                    i = j + 1
-                j+=1
+            j=0
+            for k in range(len(z_list)):
+                j = z_list[k]
+                sub_sets.append(nums[i:j])
+                i = j + 1
+                if j==z_list[-1]:
+                    sub_sets.append(nums[i:])     
+
             return sub_sets
     Data Frames:
     1. columns data type: data.dtypes
