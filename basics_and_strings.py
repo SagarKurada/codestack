@@ -486,7 +486,19 @@ ii)
                         j=j-1
                     else:
                         i=i+1
-
+     69. Unsorted solns
+         def sa(s,net):
+            import collections
+            d=collections.Counter(s)
+            #print(d)
+            for k,v in d.items():
+                diff=net-k
+                if diff==k and k in d.keys() and d[k]>1:
+                    return [k,k]
+                elif diff in d.keys() and diff!=k :
+                    return [k,diff]
+            return False
+        
             
     Data Frames:
     1. columns data type: data.dtypes
