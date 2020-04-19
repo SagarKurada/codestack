@@ -475,7 +475,8 @@ ii)
                     sub_sets.append(nums[i:])     
 
             return sub_sets
-     68. Sorted Converging solutions:
+     68. Selecting elements for the given target sum
+          Sorted Converging solutions:
              def sa(s,net):
                 i=0
                 j=len(s)-1
@@ -486,7 +487,7 @@ ii)
                         j=j-1
                     else:
                         i=i+1
-     69. Unsorted solns
+         Unsorted solns
          def sa(s,net):
             import collections
             d=collections.Counter(s)
