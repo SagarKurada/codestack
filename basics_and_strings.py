@@ -499,7 +499,29 @@ ii)
                 elif diff in d.keys() and diff!=k :
                     return [k,diff]
             return False
-        
+      
+    69. Maximum 2 numbers in the list:
+             max_1=float("-inf")
+            max_2=float("-inf")
+            for i in range(len(l)):
+                if l[i]>= max_1:
+                    max_2=max_1
+                    max_1=l[i]
+                if l[i] > max_2 and l[i] < max_1:
+                    max_2=l[i]
+            print(max_1,max_2)
+            
+    70. Minimum 2 numbers in the list:
+            min_1=float("inf")
+            min_2=float("inf")
+
+            for i in range(len(l)):
+                if l[i] <= min_1:
+                    min_2=min_1
+                    min_1=l[i]
+                if l[i] < min_2 and l[i] > min_1:
+                    min_2=l[i]
+            print(min_1,min_2)
             
     Data Frames:
     1. columns data type: data.dtypes
