@@ -522,7 +522,26 @@ ii)
                 if l[i] < min_2 and l[i] > min_1:
                     min_2=l[i]
             print(min_1,min_2)
-            
+    71. Peak Finding
+         def p_f(l,start,end):
+            mid=start+(end-start)//2
+            print(mid)
+            s_=0
+            e_=len(l)-1
+            if mid == e_ or mid == s_:
+                print("a",mid,l[mid])
+                return l[mid]
+            if l[mid] > l[mid-1] and l[mid] > l[mid+1]:
+                print("b",mid,l[mid])
+                return l[mid]
+            elif l[mid-1] > l[mid]:
+                print("c")
+                end = mid-1
+                return p_f(l,start,end)
+            elif l[mid] < l[mid+1]:
+                print("d")
+                start = mid+1
+                return p_f(l,start,end)
     Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
