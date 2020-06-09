@@ -271,9 +271,12 @@ count/2.0 and count/2.0 +1;
 	from project
 	group by project_id
 	order by c desc); 
-35. DateDiff:
-    datediff(day,initial_date,final_date) =1
+35. DateDiff [My SQL]:
+    datediff(initial_date,final_date) =1
     datediff(initial_date,final_date)
+    timestampdiff(day,initial_date,final_date) - Get the days
+    timestampdiff(month,intial_date,final_date) - Get the months
+    
 36. Using case to keep two filters for a same column:
     	select distinct buyer_id
 	from sales s
