@@ -131,16 +131,20 @@ ii)
      d = collections.defaultdict(list)
      for k,v in ll:
       d[k].append(v)
-      
-     b) Key only one value
-        
-      using setdefault
-      indices = {}
-        for idx, num in enumerate(sorted(nums)):
-            indices.setdefault(num, idx)
-        return [indices[num] for num in nums]
-      Set default takes the alreading existing value to the key if it exists. otherwise it takes idx value
-      
+   
+     b) #indices as count
+        d={}
+        for i in l:
+            d[i]=d.get(i,0)+1
+
+        # indices as values
+        d_1={}
+        for i,num in enumerate(l):
+            if num not in d_1:
+                d_1[num]=[i]
+            else:
+                d_1[num].append(i)
+
 21.3 The defaultdict tool is a container in the collections class of Python. 
     It's similar to the usual dictionary (dict) container, but the only difference is that a defaultdict will
     have a default value if that key has not been set yet.
