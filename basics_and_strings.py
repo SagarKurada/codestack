@@ -546,6 +546,30 @@ ii)
                 print("d")
                 start = mid+1
                 return p_f(l,start,end)
+     72. Performing multiple fucntions in dictionary:
+        def f_a(a,q):
+        input_dict={}
+        output_list=[]
+        for i, num in enumerate(a):
+            if num not in input_dict:
+                input_dict[num]=([i],float("+inf"))
+            else:
+                tuple_from_input_key = input_dict.get(num)
+                tuple_from_input_key[0].append(i)
+                index_list = tuple_from_input_key[0]
+                prev_val=index_list[-1]-index_list[-2]
+                current_min=min(prev_val,tuple_from_input_key[1])
+                tuple_from_input_key = (tuple_from_input_key[0], current_min)
+                input_dict[num]=tuple_from_input_key 
+
+        for j in q:
+            if j not in input_dict:
+                output_list.append(-1)
+            else:
+                output_list.append(input_dict[j][1])
+        return output_list  
+    
+    
     Data Frames:
     1. columns data type: data.dtypes
     2. String to datetime : tx_data['InvoiceDate'] = pd.to_datetime(tx_data['InvoiceDate'])
